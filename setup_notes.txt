@@ -1,0 +1,4 @@
+
+
+# Jupyter Kernel
+python -m ipykernel install --user --name=ai_env --display-name "Python (ai_env)"
