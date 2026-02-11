@@ -1,0 +1,177 @@
+/* 
+   AI Algo Trading - Premium Glassmorphism Theme 
+   Palette: Deep Navy (#0f0c29), Neon Cyan (#00d2ff), Neon Purple (#3a7bd5)
+*/
+
+/* 1. Global Reset & Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
+html,
+body,
+[class*="css"] {
+  font-family: "Outfit", sans-serif;
+  color: #e0e0e0;
+}
+
+/* 2. Dynamic Background */
+/* Streamlit's main container */
+.stApp {
+  background: #0f0c29;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(48, 43, 99, 0.6) 0%,
+    rgba(15, 12, 41, 1) 90%
+  );
+  background-attachment: fixed;
+}
+
+/* 3. Glassmorphism Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 210, 255, 0.3);
+}
+
+/* 4. Typography & Headers */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+}
+
+h3 {
+  color: #a8a8d8 !important;
+  border-left: 4px solid #00d2ff;
+  padding-left: 12px;
+}
+
+/* 5. Metrics & Data */
+.metric-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #8888aa;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.positive {
+  color: #00e676;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+}
+.negative {
+  color: #ff5252;
+  text-shadow: 0 0 10px rgba(255, 82, 82, 0.4);
+}
+.neutral {
+  color: #e0e0e0;
+}
+
+/* 6. Sidebar Customization */
+[data-testid="stSidebar"] {
+  background: rgba(15, 12, 41, 0.6);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-testid="stSidebar"] h1 {
+  font-size: 1.5rem;
+}
+
+/* 7. Inputs & Buttons */
+.stTextInput input,
+.stSelectbox div[data-baseweb="select"] > div,
+.stNumberInput input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.stButton button {
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.stButton button:hover {
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+  transform: scale(1.02);
+}
+
+/* Secondary Button */
+.stButton button[kind="secondary"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 8. Tabs */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 16px;
+  background: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 24px;
+  color: #8888aa;
+  transition: all 0.3s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.stTabs [aria-selected="true"] {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 210, 255, 0.1),
+    rgba(58, 123, 213, 0.1)
+  ) !important;
+  border: 1px solid rgba(0, 210, 255, 0.4) !important;
+  color: #00d2ff !important;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.1);
+}
+
+/* 9. Plotly Charts */
+.js-plotly-plot .plotly .modebar {
+  background: transparent !important;
+}

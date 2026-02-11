@@ -1,0 +1,8 @@
+yfinance
+pandas-ta
+vectorbt
+scikit-learn
+matplotlib
+plotly
+torch
+backtrader

@@ -1,0 +1,23 @@
+import torch
+from torch.utils.data import Dataset
+import numpy as np
+import pandas as pd
+
+class CryptoDataset(Dataset):
+    """
+    PyTorch Dataset for Crypto Time Series.
+    """
+    def __init__(self, X, y):
+        """
+        Args:
+            X (np.ndarray): Input features of shape (N, seq_len, num_features)
+            y (np.ndarray): Target labels of shape (N,)
+        """
+        self.X = torch.tensor(X, dtype=torch.float32)
+        self.y = torch.tensor(y, dtype=torch.float32)
+
+    def __len__(self):
+        return len(self.X)
+
+    def __getitem__(self, idx):
+        return self.X[idx], self.y[idx]
